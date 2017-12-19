@@ -1,0 +1,24 @@
+.toptoolbar-container {
+  position: absolute;
+  top: 0;  
+  right: 0; 
+  width: 100%;  
+  height: 45px;
+  background-color: black;
+  z-index: 9;
+}
+
+.toptoolbar-container > * {
+    float: right;
+    color: white;
+}
+
+.toptoolbar-container > p {
+    margin-right: 5px;
+    margin-left: 5px;
+    color: white;
+}
+
+.toptoolbar-container button:first-child {
+    margin-right: 50px;
+}

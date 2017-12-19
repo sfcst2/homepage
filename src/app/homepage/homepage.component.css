@@ -1,0 +1,49 @@
+.main-content{
+    display: flex;
+    align-items: stretch;    
+    flex-direction: column;
+    height: 100%;
+}
+
+.top-content{
+    flex: 3;
+    display: flex;
+}
+
+.main-image-content{
+ width: 30%; 
+ height: 100%; 
+ display: flex; 
+ align-items:center; 
+ justify-content: center   
+}
+
+.description-content{
+    width: 70%; 
+    height: 100%; 
+    display: flex; 
+    justify-content: center; 
+    flex-direction: column 
+}
+
+.title{
+    font-size: 36px;
+}
+
+.description-button-content{
+    align-items: center;
+}
+
+.application-content{
+    flex: 1;
+    display: flex; 
+    align-items:center; 
+    justify-content: center
+}
+
+.application-content-item{
+    flex: 1; 
+    display: flex; 
+    align-items:center; 
+    justify-content: center;
+}

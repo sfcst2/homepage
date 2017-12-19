@@ -1,0 +1,14 @@
+.homepage-container{
+    background-color: green;    
+    position: absolute;
+    top: 45px;
+    left: 45px;
+    height:  calc(100% - 45px);
+    width: calc(100% - 45px);
+}
+
+.bg{
+  background: linear-gradient(to bottom right,black , white);
+}
+
+ 
