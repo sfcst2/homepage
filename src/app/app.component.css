@@ -1,5 +1,4 @@
-.homepage-container{
-    background-color: green;    
+.homepage-container{    
     position: absolute;
     top: 45px;
     left: 45px;
@@ -8,7 +7,8 @@
 }
 
 .bg{
-  background: linear-gradient(to bottom right,black , white);
+  /*background: linear-gradient(to bottom right,black , white);*/
+  background-color: lightgray;
 }
 
  

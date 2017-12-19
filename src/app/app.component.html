@@ -1,4 +1,6 @@
 
-    <navbar></navbar>
-    <toptoolbar></toptoolbar>
-    <homepage class="homepage-container bg"></homepage>
+    <navbar (widgetWizardClicked)="widgetWizardClicked()"></navbar>
+    <toptoolbar></toptoolbar>    
+    <div class="homepage-container bg"> 
+        <template #dynamicContainer ></template>
+    </div>

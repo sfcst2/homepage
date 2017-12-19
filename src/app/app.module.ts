@@ -3,24 +3,27 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { MatButtonModule, MatMenuModule } from '@angular/material';
+import { MatButtonModule, MatMenuModule, MatDialogModule } from '@angular/material';
 import { ToptoolbarComponent } from './toptoolbar/toptoolbar.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { GadgetWizardComponent } from './gadget-wizard/gadget-wizard.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,    
-    ToptoolbarComponent, HomepageComponent    
+    ToptoolbarComponent, HomepageComponent, GadgetWizardComponent    
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[GadgetWizardComponent, HomepageComponent]
 })
 export class AppModule { }

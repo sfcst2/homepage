@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { GadgetWizardComponent } from '../gadget-wizard/gadget-wizard.component';
 
 @Component({
   selector: 'navbar',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  @Output()
+  widgetWizardClicked: EventEmitter<any> = new EventEmitter<any>();
+
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
+  }
+
+  showWidgetWizard(event: any): void {
+    console.log('clicked the show widget wizard');
+    this.widgetWizardClicked.emit();
   }
 
 }
