@@ -3,6 +3,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { GadgetWizardComponent } from './gadget-wizard/gadget-wizard.component';
 import { HomepageComponent } from './homepage/homepage.component';
 
+declare var $: any;
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -17,7 +20,8 @@ export class AppComponent implements OnInit {
   constructor(private resolver: ComponentFactoryResolver) { }
 
   ngOnInit(): void{
-    this.createHomepageContent();
+    $.material.init();
+    //this.createHomepageContent();
   }
 
   createGadgetComponent() {
