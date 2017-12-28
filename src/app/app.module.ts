@@ -3,32 +3,27 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { MatButtonModule, MatMenuModule, MatDialogModule } from '@angular/material';
-import { ToptoolbarComponent } from './toptoolbar/toptoolbar.component';
-import { HomepageComponent } from './homepage/homepage.component';
-import { GadgetWizardComponent } from './gadget-wizard/gadget-wizard.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
-
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 const routes: Routes =[
-    { path: 'dashboard',      component: GadgetWizardComponent },
-    { path: 'user-profile',   component: GadgetWizardComponent },
-    { path: 'table-list',     component: GadgetWizardComponent },
-    { path: 'typography',     component: GadgetWizardComponent },
-    { path: 'icons',          component: GadgetWizardComponent },
-    { path: 'maps',           component: GadgetWizardComponent },
-    { path: 'notifications',  component: GadgetWizardComponent },
-    { path: 'upgrade',        component: GadgetWizardComponent },
+    { path: 'dashboard',      component: DashboardComponent },
+    { path: 'user-profile',   component: HomepageComponent },
+    { path: 'table-list',     component: DashboardComponent },
+    { path: 'typography',     component: DashboardComponent },
+    { path: 'icons',          component: DashboardComponent },
+    { path: 'maps',           component: DashboardComponent },
+    { path: 'notifications',  component: DashboardComponent },
+    { path: 'upgrade',        component: DashboardComponent },
     { path: '',               redirectTo: 'dashboard', pathMatch: 'full' }
 ];
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavbarComponent,    
-    ToptoolbarComponent, HomepageComponent, GadgetWizardComponent,
-     SidebarComponent, NavbarComponent
+    AppComponent, SidebarComponent, NavbarComponent, DashboardComponent, HomepageComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -40,7 +35,6 @@ const routes: Routes =[
     RouterModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  entryComponents:[GadgetWizardComponent, HomepageComponent]
+  bootstrap: [AppComponent]  
 })
 export class AppModule { }
